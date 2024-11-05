@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web oficial del Club Atlético Estudiantes de Berazategui, con información sobre el equipo, historia, y noticias.">
+    <title>Club Atlético Estudiantes de Berazategui</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #004b87, #00aaff);
+            color: #ffffff;
+        }
+
+        header {
+            background: #004b87;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00aaff;
+        }
+
+        .banner {
+            background: url('banner.jpg') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 30px rgba(255, 255, 255, 0.7);
+        }
+
+        h2 {
+            color: #00aaff;
+        }
+
+        .galeria {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .galeria img {
+            width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
+
+        .jugadores {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .jugador {
+            background: #343a40;
+            color: #ffffff;
+            border: 1px solid #495057;
+            margin: 10px;
+            padding: 10px;
+            flex: 1 1 calc(30% - 20px);
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .jugador:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        form {
+            background: #495057;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #004b87;
+            color: #ffffff;
+        }
+
+        button {
+            background-color: #004b87;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #003366;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            background: #343a40;
+            color: #ffffff;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #ced4da;
+        }
+
+        .redes {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .redes img {
+            width: 40px;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+
+        .redes img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .jugadores {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
+            }
+
+            .galeria img {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Club Atlético Estudiantes de Berazategui</h1>
+        <nav>
+            <ul>
+                <li><a href="#historia">Nuestra Historia</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <div class="banner">
+                <h2>¡Bienvenidos a la Casa del Fútbol!</h2>
+            </div>
+        </section>
+
+        <section id="historia">
+            <h2>Nuestra Historia</h2>
+            <p>Fundado por Santiago, Uriel y Valentín, tres chicos de la Escuela Técnica Número 4 en Sourigues, el Club Atlético Estudiantes de Berazategui nace de la pasión por el fútbol y el deseo de crear un espacio donde los jóvenes de la zona puedan crecer y desarrollar su amor por el deporte.</p>
+            <p>Al notar la falta de un club de fútbol importante, se unieron para fundar este club, con el objetivo de sacar a los chicos de las calles y proporcionarles un lugar seguro y positivo. El club promueve valores de trabajo y honestidad, y busca competir en la máxima categoría nacional, representando siempre una buena imagen para los jóvenes.</p>
+            <div class="galeria">
+                <img src="escudo.jpg" alt="Escudo">
+                <img src="equipacion.jpg" alt="Equipación">
+            </div>
+        </section>
+
+        <section id="equipo">
+            <h2>Equipo Actual</h2>
+            <h3>Arqueros</h3>
+            <div class="jugadores">
+                <div class="jugador"><h3>Emiliano "Dibu" Martínez</h3></div>
+                <div class="jugador"><h3>Franco Armani</h3></div>
+                <div class="jugador"><h3>Leandro Brey</h3></div>
+            </div>
+            <h3>Defensores</h3>
+            <div class="jugadores">
+                <div class="jugador"><h3>Nahuel Molina</h3></div>
+                <div class="jugador"><h3>Gonzalo Montiel</h3></div>
+                <div class="jugador"><h3>Nicolás Otamendi</h3></div>
+                <div class="jugador"><h3>Cristian Romero</h3></div>
+                <div class="jugador"><h3>Lisandro Martínez</h3></div>
+                <div class="jugador"><h3>Germán Pezzella</h3></div>
+                <div class="jugador"><h3>Nicolás Tagliafico</h3></div>
+                <div class="jugador"><h3>Marcos Acuña</h3></div>
+                <div class="jugador"><h3>Juan Foyth</h3></div>
+            </div>
+            <h3>Mediocampistas</h3>
+            <div class="jugadores">
+                <div class="jugador"><h3>Rodrigo De Paul</h3></div>
+                <div class="jugador"><h3>Enzo Fernández</h3></div>
+                <div class="jugador"><h3>Alexis Mac Allister</h3></div>
+                <div class="jugador"><h3>Leandro Paredes</h3></div>
+                <div class="jugador"><h3>Alejandro Gómez</h3></div>
+                <div class="jugador"><h3>Thiago Almada</h3></div>
+                <div class="jugador"><h3>Ezequiel Palacios</h3></div>
+            </div>
+            <h3>Delanteros</h3>
+            <div class="jugadores">
+                <div class="jugador"><h3>Lautaro Martínez</h3></div>
+                <div class="jugador"><h3>Paulo Dybala</h3></div>
+                <div class="jugador"><h3>Julián Álvarez</h3></div>
+                <div class="jugador"><h3>Ángel Di María</h3></div>
+                <div class="jugador"><h3>Lionel Messi</h3></div>
+                <div class="jugador"><h3>Ángel Correa</h3></div>
+            </div>
+            <div class="redes">
+                <h3>Síguenos en nuestras redes sociales</h3>
+                <a href="https://www.facebook.com/ClubAtleticoEstudiantes"><img src="facebook-icon.png" alt="Facebook" /></a>
+                <a href="https://twitter.com/ClubAtleticoEstudiantes"><img src="twitter-icon.png" alt="Twitter" /></a>
+                <a href="https://www.instagram.com/ClubAtleticoEstudiantes"><img src="instagram-icon.png" alt="Instagram" /></a>
+            </div>
+        </section>
+
+        <section id="noticias">
+            <h2>Noticias y Actualizaciones</h2>
+            <article>
+                <h3>Último Partido: ¡Victoria!</h3>
+                <p>El Club Atlético Estudiantes de Berazategui ganó en su visita contra Dock Sud por 2-0, con un doblete de Rodrigo De Paul. ¡Se mantiene firme en lo alto de la tabla e invictos!</p>
+            </article>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+            <p>Teléfono: 11-6877-5446</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Club Atlético Estudiantes de Berazategui. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
